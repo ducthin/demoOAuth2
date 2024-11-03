@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>User Profile</title>
+  <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<style>
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+  }
+
+  .card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    width: 300px;
+  }
+
+  .user-photo {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-bottom: 20px;
+  }
+
+  h2 {
+    margin: 0;
+    font-size: 24px;
+    color: #333;
+  }
+
+  p {
+    margin: 10px 0 0;
+    font-size: 16px;
+    color: #666;
+  }
+</style>
+<body>
+<div class="card">
+  <img th:src="${photo}" alt="User Photo" class="user-photo">
+  <h2 th:text="${name}">User Name</h2>
+  <p th:text="${email}">User Email</p>
+</div>
+</body>
+</html>
